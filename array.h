@@ -1,11 +1,5 @@
 /*****************************************************
-Template prepared by Kazumi Slott
-CS211
-lab on template functions
-This header file provides useful operations on an array
-of any data type.
-
-Your name: Minh Tran
+This header file provides useful operations on an array of any data type.
 *****************************************************/
 #ifndef ARRAY_H
 #define ARRAY_H
@@ -137,12 +131,6 @@ This function sorts the items in ascending order: smallest to largest
 array is an array of any data type
 N is the number of items in the array
 **********************************************/
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//The following function sorts an integer array in ascending order
-//using the selection sort algorithm.
-//You need to change this code so it works with an array of any data type.
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 template <class T>
 void sort(T array[], int N)
 {
