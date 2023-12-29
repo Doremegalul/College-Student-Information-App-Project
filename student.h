@@ -1,8 +1,4 @@
 /*
-Minh Tran
-CS 211
-02-11-2022
-
 This program is a student class to hold private construct and public prototype.
 */
 
