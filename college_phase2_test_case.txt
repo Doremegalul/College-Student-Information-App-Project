@@ -1,0 +1,184 @@
+  cout << "-------- adding the first student --------" << endl;
+  addStu(ar, count, id);
+  cout << "-------- showing the first student --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "-------- addiing 111 to a student --------" << endl;
+  addCourse(ar[0]);
+  cout << "-------- showing the info --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "-------- addiing 222 to a student --------" << endl;
+  addCourse(ar[0]);
+  cout << "-------- showing the info --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "-------- addiing 222 again to a student ==> error --------" << endl;
+  addCourse(ar[0]);
+  cout << "-------- showing the info --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "-------- removing 222 --------" << endl;
+  dropCourse(ar[0]);
+  cout << "-------- showing the info --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "-------- removing 333 ==> error --------" << endl;
+  dropCourse(ar[0]);
+  cout << "-------- showing the info --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "########################################################################################" << endl;
+  cout << "If you didn't work on bonus feature, enter 20 0. If you did, enter 20" << endl;
+  cout << "########################################################################################" << endl;
+  cout << "-------- making a payment --------" << endl;
+  makePayment(ar[0]);
+  cout << "-------- showing the info --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "########################################################################################" << endl;
+  cout << "If you didn't work on bonus feature, enter 10 14. If you did, enter 10.14" << endl;
+  cout << "########################################################################################" << endl;
+  cout << "-------- making a payment --------" << endl;
+  makePayment(ar[0]);
+  cout << "-------- showing the info --------" << endl;
+  showStuInfo(ar[0]);
+  cout << "########################################################################################" << endl;
+  cout << "Did you work on the bonus feature where you reject an over payment? Enter Y or N:";
+  char ans;
+  cin >> ans;
+  if(ans == 'Y' || ans == 'y')
+    {
+      cout << "-------- For bonus, making an overpayment ==> show error and won't be processed --------" << endl;
+      makePayment(ar[0]);
+      cout << "-------- showing the info --------" << endl;
+      showStuInfo(ar[0]);
+    }
+  else
+    cout << "You didn't work on the bonus feather for overpayment" << endl;
+
+
+
+[kslott@empress cs211spr16]$ ./a.out
+-------- adding the first student --------
+
+Enter the first name: Kaz
+Enter the last name: Slott
+Enter the gender: f
+-------- showing the first student --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 0
+Courses: 
+Amount owed $0.00
+
+-------- addiing 111 to a student --------
+Enter a crn: 111
+111 has been added successfully
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 1
+Courses: 111 
+Amount owed $50.14
+
+-------- addiing 222 to a student --------
+Enter a crn: 222
+222 has been added successfully
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 2
+Courses: 111 222 
+Amount owed $100.28
+
+-------- addiing 222 again to a student ==> error --------
+Enter a crn: 222
+222 was not added because you have 222 already.
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 2
+Courses: 111 222 
+Amount owed $100.28
+
+-------- removing 222 --------
+Enter a crn: 222
+222 has been dropped successfully.
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 1
+Courses: 111 
+Amount owed $50.14
+
+-------- removing 333 ==> error --------
+Enter a crn: 333
+333 wasn't dropped from Kaz because 333 doesn't exist
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 1
+Courses: 111 
+Amount owed $50.14
+
+########################################################################################
+If you didn't work on bonus feature, enter 20 0. If you did, enter 20
+########################################################################################
+-------- making a payment --------
+You owe $50.14
+Enter your payment: 20
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 1
+Courses: 111 
+Amount owed $30.14
+
+########################################################################################
+If you didn't work on bonus feature, enter 10 14. If you did, enter 10.14
+########################################################################################
+-------- making a payment --------
+You owe $30.14
+Enter your payment: 10.14
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 1
+Courses: 111 
+Amount owed $20.00
+
+########################################################################################
+Did you work on the bonus feature where you reject an over payment? Enter Y or N:Y
+-------- For bonus, making an overpayment ==> show error and won't be processed --------
+You owe $20.00
+Enter your payment: 20.01
+You owe 20.00 and you are trying to pay too much
+-------- showing the info --------
+--------------------
+first name: Kaz
+last name: Slott
+gender: f
+stu id: 100000
+num classes: 1
+Courses: 111 
+Amount owed $20.00
+
+[kslott@empress cs211spr16]$ 
