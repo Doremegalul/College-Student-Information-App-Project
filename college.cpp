@@ -1,7 +1,6 @@
 #include <iostream>
-#include <cstdlib> //for atoi() <-- you might not use this
+#include <cstdlib> //for atoi() 
 using namespace std;
-#include "/cs/slott/cs211/checkInput.h"
 #include "student.h"
 #include "array.h"
 #include <fstream>
@@ -190,10 +189,10 @@ This funcrion is show full infomation of student.
 s is the student object.
 */
 void showStuInfo(Student& s)//pass ONE student object - NOT the array  
-{                                                                                             //*********************************************************************
-//DO NOT send the entire array to this function. BIG deduction if you do.
-//SEND only ONE student object as a parameter. If you don't know how, check
-//lab1-struct.cpp.
+{                                                                                             
+//*********************************************************************
+//DO NOT send the entire array to this function. 
+//SEND only ONE student object as a parameter.
 //********************************************************************** 
   cout << "--------------------" << endl;                        
                                                                                              
@@ -220,15 +219,13 @@ void allStuInfo(Student studentArray[], int index)
 {
 //Case 5 of Admission and case 4 of student
 //******************************************
-//YOU MUST call showStuInfo() to show each student.
+//call showStuInfo() to show each student.
 //*******************************************
   for(int i = 0; i < index; i++) //Until the condition is not met, it will display 
     {
       showStuInfo(studentArray[i]);
     }
 }
-
-
 
 /*
 This funcrion is to return true or false based on if the student has an ID or not.
@@ -330,9 +327,7 @@ void addStuFromFile(Student studentArray[], int& index, int& ID)
  }
 }
 
-
 //*******************  PHASE 2 ****************************
-
 /*
 This function is to add the course to the student.
 
@@ -447,7 +442,6 @@ void makePayment(Student& s) //pass one student object - not the array
     }
 }
 
-
 //******************** PHASE 3 ****************************
 
 /*
@@ -515,8 +509,6 @@ int findStu(Student studentArray[])
 //If the student doesn't exist, show an error message.
 //If it exists, call showStuInfo to show the student
 }
-
-
  verifyStu()
 {
 //You may decide not to use this function. If so, that is OK.
